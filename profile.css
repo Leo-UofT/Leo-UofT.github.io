@@ -1,0 +1,482 @@
+/* global styles */
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-width: 300px;
+}
+* {
+    transition: 0.5s;
+}
+header {
+    width: 100%;
+}
+main {
+    float: left;
+    width: calc(100% - 40px);
+}
+main > * {
+    float: left;
+}
+h2 {
+    font-size: 1.4em;
+}
+button:focus {
+    outline:0;
+}
+
+/* styles for header */
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: DodgerBlue;
+}
+.nav a {
+    float: none;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.nav a:hover {
+    background-color: LightSkyBlue;
+}
+.nav a:active {
+    background-color: DodgerBlue;
+}
+.nav a:first-child {
+    font-size: 28px;
+    padding: 15.5px 15px;
+    margin-right: 61.2px;
+    font-weight: bold;
+}
+.nav a:not(:first-child) {
+    display: none;
+}
+.nav a.dropdown {
+    position: relative;
+    float: none;
+    clear: both;
+    display: block;
+    text-align: left;
+}
+.dropdown_button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 13.5px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+}
+.dropdown_button:hover {
+    background-color: LightSkyBlue;
+}
+.dropdown_button:active {
+    background-color: DodgerBlue;
+}
+.cover {
+    margin: 0;
+    margin-top: 65px;
+    height: 150px;
+	background-image: url("res/cover.jpg");
+    background-color: LightSkyBlue;
+    background-position: 50% 50%;
+    background-size: 100%;
+    padding: 0;
+}
+
+/* styles for main */
+main {
+    margin: 0 20px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+.intro {
+    overflow: visible;
+}
+
+/* styles for intro */
+.intro > * {
+    float: left;
+}
+.intro .profile_photo {
+    margin: 0;
+	position: absolute;
+    top: calc(211px - 20vw);
+    left: 10vw;
+}
+.intro .profile_photo img {
+    width: 40vw;
+    max-width: 192px;
+    border-radius: 200px;
+    border: 4px solid DodgerBlue;
+}
+.profile_name {
+    margin: 0;
+	padding-left: 50vw;
+    padding-right: 20px;
+    text-align: center;
+    clear: right;
+    height: 20vw;
+    font-size: 8vw;
+}
+.intro .profile_detail {
+	float: left;
+    clear: both;
+    width: 100%;
+    margin: 20px 0 10px 0;
+}
+.intro .profile_detail * {
+	float: left;
+}
+.intro .profile_detail > * {
+	margin: 0;
+}
+.intro .icon {
+    width: 30px;
+    margin: 10px;
+}
+.profile_bio {
+    clear: both;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* styles for external_links */
+.external_links a {
+    overflow: hidden;
+    float: left;
+    background-color: DodgerBlue;
+    border-radius: 50px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 10px 10px;
+    line-height: 1.8;
+}
+.external_links :last-child {
+    margin-right: 0;
+}
+.external_links a:hover {
+    background-color: LightSkyBlue;
+}
+.external_links a:active {
+    background-color: DodgerBlue;
+}
+.external_links a > * {
+    float: left;
+}
+.external_links .icon {
+    width: 25px;
+    margin: 0 10px 0 0;
+}
+
+/* styles for post */
+.post_feed {
+    clear: both;
+    width: 100%;
+    overflow: scroll;
+}
+.post_feed .post_feed_title {
+    clear: both;
+    font-size: 30px;
+}
+.post_feed > noscript {
+    margin: 10px;
+    color: red;
+}
+.post {
+    border-radius: 40px;
+    border: 4px solid DodgerBlue;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    float: left;
+    clear: both;
+    min-width: 225px;
+    max-width: calc(100% - 30px);
+}
+.post .profile_photo {
+    width: 40px;
+    border-radius: 100px;
+    border: 2px solid DodgerBlue;
+}
+.post .post_title {
+    margin: 5px 5px;
+}
+.post .post_title > * {
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.post .post_title .time_stamp {
+    font-size: 12px;
+}
+.post > *:not(p) {
+    float: left;
+}
+.post .like_button {
+    float: right;
+    border: none;
+    color: DodgerBlue;
+    padding: 0;
+    background-color: White;
+    height: 50px;
+    margin-top: 5px;
+}
+.post .like_button:hover {
+    color: LightSkyBlue;
+}
+.post .like_button:active {
+    color: DodgerBlue;
+}
+.post .like_button > * {
+    float: left;
+}
+.post .like_button .like {
+    background-image: url(res/like.svg);
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+.post .like_button:hover .like {
+    background-image: url(res/like-hover.svg);
+}
+.post .like_button:active .like {
+    background-image: url(res/like.svg);
+}
+.post .like_button .count {
+    font-size: 12px;
+    margin: 10px 0 0 3px;
+}
+.post > p.post_content {
+    clear: both;
+    word-wrap: break-word;
+    margin: 80px 0 10px 0;
+}
+.post > img.post_content {
+    margin: 10px 0;
+    max-width: calc(100vw - 70px);
+    clear: both;
+}
+
+/* styles for footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: DodgerBlue;
+}
+footer > * {
+    margin: 10px 5px;
+    float: left;
+}
+footer .input_text {
+    margin: 10px 15px 10px 20px;
+    width: calc(100% - 205px);
+    font-size: 21px;
+}
+footer .input_text.invalid {
+    border: 2px solid red;
+}
+footer .post_button {
+    font-weight: bold;
+    height: 35px;
+    color: DodgerBlue;
+    background-color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 60px;
+    border-radius: 80px;
+    font-size: 16px;
+    padding: 3px 6px;
+    margin: 7px 10px;
+}
+footer .post_button:hover {
+    color: LightSkyBlue;
+}
+footer .post_button:active {
+    color: DodgerBlue;
+}
+
+/* styles for device which has width larger than 480px */
+@media screen and (min-width: 480px) {
+    main {
+        margin-left: 50px;
+        margin-right: 50px;
+        width: calc(100% - 100px);
+    }
+    .nav a:first-child {
+        margin-left: 10vw;
+    }
+    .cover {
+        height: 200px;
+    }
+    .intro .profile_photo {
+        top: 165px;
+    }
+    .profile_name {
+        height: 96px;
+        display: inline-block;
+        padding-left: calc(10vw + 180px);
+        font-size: 38px;
+    }
+    .external_links a {
+        font-size: 18px;
+    }
+    .post {
+        border-radius: 50px;
+        padding: 15px;
+        max-width: calc(100% - 38px);
+    }
+    .post .post_title > * {
+        font-size: 24px;
+    }
+    .post .post_title .time_stamp {
+        font-size: 17px;
+    }
+    .post .profile_photo {
+        width: 60px;
+    }
+    .post > img.post_content {
+        max-width:  calc(100vw - 138px);
+    }
+    .post .like_button .like {
+        width: 30px;
+        height: 30px;
+    }
+    .post .like_button .count {
+        font-size: 20px;
+        margin: 10px 3px 0 3px;
+    }
+    footer .input_text {
+        margin: 10px 15px 10px 20px;
+        width: calc(100% - 250px);
+    }
+    footer .post_button {
+        font-weight: bold;
+        height: 35px;
+        color: DodgerBlue;
+        background-color: white;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        width: 80px;
+        border-radius: 80px;
+        font-size: 18px;
+        margin: 7px 10px;
+    }
+}
+
+/* styles for device which has width larger than 650px */
+@media screen and (min-width: 650px) {
+    .nav a:first-child {
+        margin-right: 20px;
+        float: left;
+    }
+    .nav a:not(:first-child) {
+        font-size: 22px;
+        display: block;
+        float: left;
+        padding: 22px 30px 16px 30px;
+    }
+    .dropdown_button {
+	   display: none;
+    }
+    .intro .profile_photo {
+        top: 165px;
+        left: 10vw;
+    }
+    .intro .profile_detail > * {
+        margin: 0 10px;
+    }
+    .profile_name {
+        height: auto;
+        padding-left: calc(10vw + 180px);
+        padding-right: 0;
+        display: inline-block;
+        font-size: 38px;
+    }
+    .profile_detail {
+        padding-left: calc(10vw + 130px);
+    }
+}
+
+/* styles for device which has width larger than 760px */
+@media screen and (min-width: 760px) {
+    .nav a:first-child {
+        margin-left: 20%;
+    }
+    .cover {
+        height: 300px;
+    }
+    .intro .profile_photo {
+        top: 265px;
+        left: 20vw;
+    }
+    .profile_name {
+        height: auto;
+        padding-left: calc(20vw + 180px);
+        padding-right: 0;
+        display: inline-block;
+        font-size: 38px;
+    }
+    .profile_detail {
+        padding-left: calc(20vw + 130px);
+    }
+    
+}
+
+/* styles for device which has width larger than 970px */
+@media screen and (min-width: 970px) {
+    main {
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border: 4px solid DodgerBlue;
+        border-top: 0;
+        width: 870px;
+        padding: 0 36px 40px 36px;
+        margin-left: calc((100% - 950px)/2);
+        margin-right: calc((100% - 950px)/2);
+    }
+    .nav a:first-child {
+	    margin-left: calc((100% - 950px)/2 + 150px)
+    }
+    .intro .profile_photo {
+        left: calc((100% - 870px)/2 + 100px);
+    }
+    .profile_name {
+        padding-left: 360px;
+    }
+    .profile_bio {
+        width: 50%;
+        margin-right: 15px;
+    }
+    .profile_detail {
+        padding-left: 300px;
+    }
+    .post > img.post_content {
+        max-width:  830px;
+    }
+}
